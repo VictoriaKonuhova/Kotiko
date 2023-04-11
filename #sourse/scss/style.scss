@@ -1,0 +1,383 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #242424;
+  background-color: #fff;
+}
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.header {
+  padding-top: 30px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 50px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+  }
+  &__item {
+    font-size: 13px;
+    font-weight: 600;
+    padding-left: 25px;
+    position: relative;
+    &_geo::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/geo.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 15px;
+      height: 19px;
+      left: 0;
+      bottom: 5px;
+    }
+    &_geo::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/cloud-1.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 185px;
+      height: 68px;
+      top: -31px;
+      left: -97px;
+    }
+    &_time::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/time.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      bottom: -3px;
+    }
+    &_time::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/cloud-2.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 110px;
+      height: 37px;
+      top: 26px;
+      left: 116px;
+    }
+    &_phone::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/phone.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      bottom: -3px;
+    }
+    &_phone:after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/cloud-3.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 91px;
+      height: 30px;
+      top: -14px;
+      left: 101px;
+    }
+  }
+  &__button {
+    color: #fff;
+    background-color: #f6a6bf;
+    padding: 20px 30px 20px 70px;
+    border-radius: 100px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/inst.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 24px;
+      height: 24px;
+      left: 40px;
+      bottom: 17px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/cloud-4.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 204px;
+      height: 68px;
+      left: 140px;
+      top: 80px;
+    }
+  }
+}
+.logo-header {
+  span {
+    display: block;
+    margin: 5px 0 0 13px;
+    font-weight: 500;
+    color: #f6a6bf;
+  }
+}
+.menu {
+  &__item {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    span {
+      display: block;
+      text-align: center;
+      font-weight: 500;
+    }
+    &_rooms {
+      span {
+        font-size: 18px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #28afc9;
+        width: 113px;
+        height: 137px;
+        clip-path: ellipse(47.03% 50% at 50% 50%);
+        z-index: -1;
+        transform: rotate(-41deg);
+        top: 150px;
+      }
+    }
+    &_booking {
+      span {
+        font-size: 9px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #28afc9;
+        width: 113px;
+        height: 137px;
+        clip-path: ellipse(47.03% 50% at 50% 50%);
+        z-index: -1;
+        transform: rotate(-24deg);
+        top: 35px;
+        left: 60px;
+      }
+    }
+    &_video {
+      span {
+        font-size: 10px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #28afc9;
+        width: 113px;
+        height: 137px;
+        clip-path: ellipse(47.03% 50% at 50% 50%);
+        z-index: -1;
+        transform: rotate(2deg);
+        top: 16px;
+        left: 178px;
+      }
+    }
+    &_pay {
+      font-size: 17px;
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #28afc9;
+        width: 113px;
+        height: 137px;
+        clip-path: ellipse(47.03% 50% at 50% 50%);
+        z-index: -1;
+        transform: rotate(22deg);
+        top: 68px;
+        left: 295px;
+      }
+    }
+    &_about {
+      font-size: 40px;
+      text-align: center;
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/foot.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 256px;
+        height: 225px;
+        left: 100px;
+        top: 166px;
+        transform: rotate(-6deg);
+        z-index: -1;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    &_rooms {
+      transform: rotate(-41deg);
+      position: absolute;
+      top: 194px;
+      left: 15px;
+    }
+    &_booking {
+      transform: rotate(-24deg);
+      position: absolute;
+      top: 80px;
+      left: 76px;
+    }
+    &_video {
+      transform: rotate(2deg);
+      position: absolute;
+      top: 63px;
+      left: 202px;
+    }
+    &_pay {
+      transform: rotate(26deg);
+      position: absolute;
+      top: 123px;
+      left: 312px;
+    }
+    &_about {
+      transform: rotate(-17deg);
+      position: absolute;
+      top: 227px;
+      left: 165px;
+    }
+  }
+  &__list {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/seal.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 180px;
+      height: 180px;
+      top: 315px;
+      left: 40px;
+    }
+  }
+}
+.promo {
+  &__inner {
+    display: flex;
+  }
+  &__menu-box {
+    width: 410px;
+  }
+  &__content {
+    padding: 75px 0 0 30px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/header-cats.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 834px;
+      height: 370px;
+      top: 212px;
+      left: 33px;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+    max-width: 590px;
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    font-size: 18px;
+  }
+  &__dop-info {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/leaves.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 431px;
+      height: 384px;
+      right: -224px;
+      top: -325px;
+      z-index: -1;
+    }
+  }
+  &__items {
+    display: flex;
+    gap: 0 75px;
+  }
+  &__item {
+    padding-left: 65px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/heart-footprint.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 53px;
+      height: 45px;
+      left: 0;
+    }
+    &:nth-child(1) {
+      max-width: 316px;
+    }
+    &:nth-child(2) {
+      max-width: 246px;
+    }
+    &:nth-child(3) {
+      max-width: 260px;
+    }
+  }
+}
+.form {
+  max-width: 230px;
+  padding: 35px 0 150px;
+  input {
+    border: none;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #242424;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    &::placeholder {
+      color: #848484;
+    }
+  }
+  button {
+    font-size: 18px;
+    color: #fff;
+    padding: 18px 26px;
+    border-radius: 100px;
+    background-color: #f6a6bf;
+  }
+}
