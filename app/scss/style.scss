@@ -65,9 +65,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
-
 html {
   overflow-x: hidden;
 }
@@ -434,38 +431,78 @@ body {
     font-weight: 600;
     max-width: 172px;
   }
-  &__cards{
+  &__cards {
     display: flex;
     gap: 0 30px;
   }
-  &__card{
+  &__card {
     width: 380px;
-    border: 1px solid #F6A6BF;
+    border: 1px solid #f6a6bf;
   }
-  &__cost{
+  &__info-inner {
+    margin: 20px 20px 30px 20px;
+  }
+  &__cost {
     font-size: 20px;
     display: flex;
     justify-content: space-between;
-    margin: 20px 20px 40px 20px;
+    align-items: flex-end;
   }
-  &__name{
+  &__name {
     width: 156px;
-    color: #F6A6BF;
+    color: #f6a6bf;
     font-weight: 600;
   }
-  &__price{
-    display: block;
+  &__price {
     font-weight: 500;
+  }
+  &__info {
+    padding: 40px 0 67px;
+    gap: 25px 0;
+    p {
+      color: #848484;
+    }
+  }
+  &__size {
+    display: flex;
+    gap: 0 44px;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  &__house-size {
+    display: flex;
+    gap: 0 35px;
+    align-items: flex-end;
+  }
+  &__link{
+    display: block;
+    text-align: center;
+    width: 330px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #F6A6BF;
+    border: 1px solid #F6A6BF;
+    transition: all 0.3s;
+    &:hover{
+      background-color: transparent;
+      color: #F6A6BF;
+    }
   }
 }
 
 .swiper-button-left,
-.swiper-button-right{
+.swiper-button-right {
   position: absolute;
   z-index: 2;
   top: 232px;
   cursor: pointer;
 }
-.swiper-button-right{
+.swiper-button-right {
   right: 0;
 }
