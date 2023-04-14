@@ -474,7 +474,7 @@ body {
     gap: 0 35px;
     align-items: flex-end;
   }
-  &__link{
+  &__link {
     display: block;
     text-align: center;
     width: 330px;
@@ -486,23 +486,79 @@ body {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
-    background-color: #F6A6BF;
-    border: 1px solid #F6A6BF;
+    background-color: #f6a6bf;
+    border: 1px solid #f6a6bf;
     transition: all 0.3s;
-    &:hover{
+    &:hover {
       background-color: transparent;
-      color: #F6A6BF;
+      color: #f6a6bf;
     }
+  }
+  .swiper-button-left,
+  .swiper-button-right {
+    position: absolute;
+    z-index: 2;
+    top: 232px;
+    cursor: pointer;
+  }
+  .swiper-button-right {
+    right: 0;
   }
 }
 
-.swiper-button-left,
-.swiper-button-right {
-  position: absolute;
-  z-index: 2;
-  top: 232px;
-  cursor: pointer;
-}
-.swiper-button-right {
-  right: 0;
+.photo-gallery {
+  padding: 85px 0;
+  &__slider {
+    overflow-x: hidden;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+  .swiper-slide-active {
+    img {
+      width: 480px !important;
+      height: 532px !important;
+    }
+  }
+  .swiper-slide {
+    img {
+      width: 330px;
+      height: 340px;
+    }
+  }
+  &__swiper-pagination {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 500;
+    color: #848484;
+    left: -580px;
+    bottom: 140px;
+  }
+  &__buttons {
+    display: flex;
+    gap: 0 10px;
+    position: relative;
+    z-index: 2;
+    bottom: 65px;
+    left: 412px;
+  }
+  &__button {
+    cursor: pointer;
+    background-color: #f6a6bf;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f6a6bf;
+    transition: all 0.3s;
+    &:hover {
+      path {
+        stroke: #f6a6bf;
+      }
+      background-color: transparent;
+    }
+  }
 }
