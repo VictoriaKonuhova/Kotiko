@@ -527,21 +527,24 @@ body {
       height: 340px;
     }
   }
+  &__control {
+    position: relative;
+    margin-left: 405px;
+    margin-top: -70px;
+    width: 195px;
+    z-index: 2;
+  }
   &__swiper-pagination {
-    position: absolute;
+    position: relative;
     font-size: 20px;
     font-weight: 500;
     color: #848484;
-    left: -580px;
-    bottom: 140px;
+    left: -64px;
+    top: -70px;
   }
   &__buttons {
     display: flex;
     gap: 0 10px;
-    position: relative;
-    z-index: 2;
-    bottom: 65px;
-    left: 412px;
   }
   &__button {
     cursor: pointer;
@@ -559,6 +562,83 @@ body {
         stroke: #f6a6bf;
       }
       background-color: transparent;
+    }
+  }
+}
+
+.conditions {
+  padding: 85px 0;
+  background-image: url(../img/conditions-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__item {
+    padding: 40px 0 30px;
+    border-top: 1px solid #f6a6bf;
+    display: flex;
+  }
+  &__title-box {
+    max-width: 630px;
+    width: 100%;
+    .conditions__item-list {
+      margin-top: 40px;
+      max-width: 470px;
+      width: 100%;
+    }
+    .conditions__item-par {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__item-title {
+    font-size: 26px;
+    font-weight: 600;
+    max-width: 368px;
+    width: 100%;
+  }
+  &__title-text {
+    max-width: 450px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #848484;
+    margin-top: 30px;
+  }
+  &__text-box {
+    max-width: 535px;
+    width: 100%;
+    font-size: 18px;
+  }
+  &__item-text {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__item-list {
+    font-size: 18px;
+  }
+  &__item-par {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #f6a6bf;
+      left: 0;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
