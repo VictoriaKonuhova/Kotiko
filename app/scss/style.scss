@@ -747,7 +747,7 @@ body {
 }
 
 .about-us {
-  padding: 85px 0 30px;
+  padding: 85px 0 45px;
   &__title-box {
     display: flex;
     justify-content: space-between;
@@ -822,8 +822,8 @@ body {
       bottom: 50%;
       transform: translateY(50%);
     }
-    &_dop{
-      &::before{
+    &_dop {
+      &::before {
         bottom: 0%;
         transform: translateY(0%);
         top: -10px;
@@ -835,4 +835,70 @@ body {
     color: #848484;
     margin-top: 12px;
   }
+}
+
+.medical-care {
+  padding: 90px 80px 90px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 62px;
+  background-color: #fffef1;
+  &__title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+  &__text {
+    line-height: 150%;
+  }
+}
+.fears {
+  &__inner {
+    padding: 170px 85px;
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+}
+
+.accordeon {
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    padding: 20px 30px;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background-color: #f6a6bf;
+      position: absolute;
+      right: 10px;
+      top: 30px;
+      transition: transform 0.2s ease 0s;
+    }
+    &::after {
+      transform: rotate(-90deg);
+    }
+  }
+  &__text {
+    height: 0;
+    overflow: hidden;
+  }
+  &__par {
+    display: block;
+    padding: 10px 30px;
+  }
+}
+.opened .accordeon__text {
+  height: auto;
+}
+
+.opened .accordeon__title:after {
+  transform: rotate(0deg);
 }

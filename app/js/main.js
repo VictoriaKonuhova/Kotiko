@@ -21,3 +21,16 @@ const swiperG = new Swiper('.swiper__g', {
   },
 
 });
+
+function accordeon() {
+  document.querySelector('.accordeon__item').classList.add('opened')
+  document.querySelectorAll('.accordeon__item').forEach(function(section){
+    section.addEventListener('click', function (e) {
+      document.querySelectorAll('.accordeon__item').forEach(function(section) {
+        section.classList.remove('opened')
+      })
+      e.target.closest('.accordeon__item').classList.toggle('opened')
+    })
+  })
+}
+accordeon();
