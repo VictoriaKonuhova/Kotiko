@@ -962,6 +962,12 @@ body {
   &__address{
     font-weight: 500;
     font-size: 20px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    max-width: 405px;
+    cursor: default;
+    outline: none;
   }
   &__address-copy{
     font-size: 18px;
@@ -993,5 +999,26 @@ body {
   &__way-text{
     max-width: 200px;
     width: 100%;
+  }
+}
+
+.footer{
+  padding: 30px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__copyright{
+    font-weight: 500;
+    font-size: 14px;
+    color: #28AFC9;
+  }
+  &__menu-list{
+    display: flex;
+    gap: 0 40px;
+  }
+  &__menu-link{
+    font-weight: 600;
+    font-size: 13px;
   }
 }
