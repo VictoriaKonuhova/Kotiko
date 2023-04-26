@@ -22,15 +22,15 @@ const swiperG = new Swiper('.swiper__g', {
 
 });
 
-function accordeon() {
-  document.querySelector('.accordeon__item').classList.add('opened')
-  document.querySelectorAll('.accordeon__item').forEach(function(section){
+function accordion() {
+  document.querySelector('.accordion__item').classList.add('opened')
+  document.querySelectorAll('.accordion__item').forEach(function(section){
     section.addEventListener('click', function (e) {
-      document.querySelectorAll('.accordeon__item').forEach(function(section) {
+      document.querySelectorAll('.accordion__item').forEach(function(section) {
         section.classList.remove('opened')
       })
-      e.target.closest('.accordeon__item').classList.toggle('opened')
+      e.target.closest('.accordion__item').classList.toggle('opened')
     })
   })
 }
-accordeon();
+accordion();

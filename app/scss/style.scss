@@ -856,14 +856,14 @@ body {
 }
 .fears {
   &__inner {
-    padding: 170px 85px;
+    padding: 170px 0 85px;
   }
   &__title {
     margin-bottom: 50px;
   }
 }
 
-.accordeon {
+.accordion {
   &__title {
     font-size: 20px;
     font-weight: 500;
@@ -895,16 +895,16 @@ body {
     padding: 10px 30px;
   }
 }
-.opened .accordeon__text {
+.opened .accordion__text {
   height: auto;
 }
 
-.opened .accordeon__title:after {
+.opened .accordion__title:after {
   transform: rotate(0deg);
 }
 
 .partnership {
-  padding: 85px 0 50px;
+  padding: 85px 0 100px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -942,5 +942,56 @@ body {
       max-width: 200px;
       width: 100%;
     }
+  }
+}
+
+.contacts{
+  padding: 70px 0 80px;
+  background-color: #FAF7F5;
+  &__title{
+    margin-bottom: 50px;
+  }
+  &__address-box{
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+    max-width: 985px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  &__address{
+    font-weight: 500;
+    font-size: 20px;
+  }
+  &__address-copy{
+    font-size: 18px;
+    color: #848484;
+  }
+  &__way{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 145px;
+  }
+  &__way-title{
+    font-weight: 600;
+    font-size: 26px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url('../img/way-bg.svg');
+      width: 249px;
+      height: 237px;
+      left: -48px;
+    }
+  }
+  &__way-inner{
+    display: flex;
+    gap: 0 120px;
+  }
+  &__way-text{
+    max-width: 200px;
+    width: 100%;
   }
 }
