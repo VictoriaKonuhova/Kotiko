@@ -29,18 +29,18 @@ const swiperG = new Swiper('.swiper__g', {
   }
 });
 
-// function accordion() {
-//   document.querySelector('.accordion__item').classList.add('opened')
-//   document.querySelectorAll('.accordion__item').forEach(function (section) {
-//     section.addEventListener('click', function (e) {
-//       document.querySelectorAll('.accordion__item').forEach(function (section) {
-//         section.classList.remove('opened')
-//       })
-//       e.target.closest('.accordion__item').classList.toggle('opened')
-//     })
-//   })
-// }
-// accordion();
+function accordion() {
+  document.querySelector('.accordion__item').classList.add('opened')
+  document.querySelectorAll('.accordion__item').forEach(function (section) {
+    section.addEventListener('click', function (e) {
+      document.querySelectorAll('.accordion__item').forEach(function (section) {
+        section.classList.remove('opened')
+      })
+      e.target.closest('.accordion__item').classList.toggle('opened')
+    })
+  })
+}
+accordion();
 
 // var text = document.getElementById("inputText");
 // var btn = document.getElementById("copyText");
@@ -61,7 +61,7 @@ function openCatalog() {
 }
 
 function response() {
-  if (window.innerWidth > 670) {
+  if (document.documentElement.clientWidth < 670) {
 
     cards.forEach((item, index) => {
       item.classList.add('hidden')

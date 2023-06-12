@@ -65,9 +65,9 @@ html {
   scroll-behavior: smooth;
 }
 
-html {
-  overflow-x: hidden;
-}
+// html {
+//   overflow-x: hidden;
+// }
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -109,7 +109,11 @@ body {
 }
 .header {
   overflow-x: hidden;
-  padding-top: 30px;
+  padding: 30px 0 25px;
+  background-image: url("../img/cloud-1.png"), url("../img/cloud-2.png"), url("../img/cloud-3.png"),
+    url("../img/cloud-4.png");
+  background-repeat: no-repeat;
+  background-position: 28% 20%, 42% 91%, 48% 15%, 63% 98%;
   &__inner {
     display: flex;
     align-items: center;
@@ -131,27 +135,19 @@ body {
     font-weight: 600;
     padding-left: 25px;
     position: relative;
-    &_geo::before {
-      content: "";
-      position: absolute;
-      background-image: url(../img/geo.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 15px;
-      height: 19px;
-      left: 0;
-      bottom: 5px;
-    }
-    &_geo::after {
-      content: "";
-      position: absolute;
-      background-image: url(../img/cloud-1.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 185px;
-      height: 68px;
-      top: -31px;
-      left: -97px;
+    &_geo {
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/geo.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 15px;
+        height: 19px;
+        left: 0;
+        bottom: 5px;
+      }
     }
     &_time::before {
       content: "";
@@ -164,38 +160,19 @@ body {
       left: 0;
       bottom: -3px;
     }
-    &_time::after {
-      content: "";
-      position: absolute;
-      background-image: url(../img/cloud-2.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 110px;
-      height: 37px;
-      top: 26px;
-      left: 116px;
-    }
-    &_phone::before {
-      content: "";
-      position: absolute;
-      background-image: url(../img/phone.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 20px;
-      height: 20px;
-      left: 2px;
-      bottom: -3px;
-    }
-    &_phone:after {
-      content: "";
-      position: absolute;
-      background-image: url(../img/cloud-3.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 91px;
-      height: 30px;
-      top: -14px;
-      left: 101px;
+    &_phone {
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/phone.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        left: 2px;
+        bottom: -3px;
+      }
     }
   }
   &__button {
@@ -214,17 +191,6 @@ body {
       height: 24px;
       left: 40px;
       bottom: 17px;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url(../img/cloud-4.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 204px;
-      height: 68px;
-      left: 140px;
-      top: 80px;
     }
   }
 }
@@ -391,7 +357,7 @@ body {
     display: block;
     width: 100%;
     border-bottom: 1px solid #242424;
-    padding-bottom: 12px;
+    padding: 12px;
     margin-bottom: 30px;
     font-size: 16px;
     &::placeholder {
@@ -663,7 +629,7 @@ body {
     border: none;
     border-bottom: 1px solid #242424;
     background-color: transparent;
-    padding-bottom: 10px;
+    padding: 10px;
     margin-bottom: 50px;
     width: 100%;
     &::placeholder {
@@ -677,6 +643,7 @@ body {
 
 .video-control {
   padding: 85px 0;
+  overflow-x: hidden;
   &__title-box {
     display: flex;
     justify-content: space-between;
@@ -740,6 +707,7 @@ body {
 
 .about-us {
   padding: 85px 0 45px;
+  overflow-x: hidden;
   &__title-box {
     display: flex;
     justify-content: space-between;
@@ -790,17 +758,20 @@ body {
     font-weight: 600;
     margin-bottom: 70px;
   }
-  &__offer-box {
+  &__offer-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1164px;
+    width: 100%;
     gap: 0 86px;
-    padding-right: 40px;
   }
   &__offer-item {
     font-size: 18px;
     padding-left: 70px;
     margin-bottom: 40px;
+    flex: 1 0 calc(50% - 86px);
     position: relative;
+    min-width: 450px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -845,13 +816,25 @@ body {
   &__text {
     line-height: 150%;
   }
+  &__img-mob{
+    display: none;
+  }
 }
 .fears {
+  padding-top: 45px;
   &__inner {
     padding: 170px 0 85px;
   }
   &__title {
     margin-bottom: 50px;
+  }
+  &__subtitle-mob{
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 13px;
+    color: #848484;
+    font-weight: 600;
   }
 }
 
@@ -1015,6 +998,14 @@ body {
   }
 }
 
+@media (max-width: 1100px){
+  .medical-care{
+    padding: 20px 30px;
+    gap: 0 20px;
+  }
+
+}
+
 @media (max-width: 1060px) {
   .photo-gallery {
     &__slide,
@@ -1042,6 +1033,7 @@ body {
 
 @media (max-width: 1010px) {
   .header {
+    background-position: 18% 20%, 38% 91%, 52% 15%, 76% 84%;
     &__list {
       flex-direction: column;
       align-items: flex-start;
@@ -1163,6 +1155,9 @@ body {
     &__img {
       display: none;
     }
+    &__img_mob {
+      display: block;
+    }
     &__list {
       &::after {
         display: none;
@@ -1215,6 +1210,34 @@ body {
       gap: 25px 25px;
     }
   }
+  .about-us {
+    &__title-box {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__offer-list {
+      gap: 0 35px;
+    }
+  }
+  .medical-care{
+    &__img{
+      display: none;
+    }
+    &__img-mob{
+      display: block;
+    }
+    &__info{
+      order: -1;
+    }
+  }
+  .fears{
+    &__inner{
+      padding: 100px 0 50px; 
+    }
+  }
 }
 
 @media (max-width: 790px) {
@@ -1223,7 +1246,7 @@ body {
       flex-direction: column;
     }
     &__menu-box {
-      padding-top: 30px;
+      padding-top: 20px;
       margin: 0 auto;
     }
     &__content {
@@ -1243,16 +1266,60 @@ body {
   .conditions {
     padding: 50px 0 20px;
   }
-  .booking {
+  .booking,
+  .about-us {
     padding: 50px 0 35px;
   }
   .video-control {
     padding: 35px 0 50px;
   }
+  .about-us {
+    &__descr {
+      max-width: 100%;
+    }
+    &__info {
+      flex-direction: column;
+    }
+    &__info-title {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    &__text-box {
+      max-width: 100%;
+    }
+    &__offer {
+      padding-top: 40px;
+    }
+    &__offer-title {
+      margin-bottom: 30px;
+    }
+  }
+  .fears{
+    &__title{
+      margin-bottom: 0;
+    }
+    &__subtitle-mob{
+      display: block;
+    }
+  }
+  .accordion{
+    &__title{
+      padding: 20px 0;
+      &::before,
+      &::after{
+        display: none;
+      }
+    }
+    &__par{
+      padding: 10px 0;
+    }
+  }
 }
 
 @media (max-width: 680px) {
   .header {
+    background-position: 18% 20%, 31% 44%, 66% 37%, 77% 65%;
+    padding: 30px 0 10px;
     &__inner {
       flex-direction: column;
       gap: 20px 0;
@@ -1274,19 +1341,12 @@ body {
           bottom: 0;
           top: 0;
         }
-        &::after {
-          top: -14px;
-          left: 101px;
-        }
       }
       &_geo {
         &::before {
           left: 67px;
           bottom: 0;
           top: 0;
-        }
-        &::after {
-          left: -97px;
         }
       }
       &_time {
@@ -1295,16 +1355,6 @@ body {
           bottom: 0;
           top: 0;
         }
-        &::after {
-          left: -115px;
-          top: 26px;
-        }
-      }
-    }
-    &__button {
-      &::after {
-        top: -112px;
-        left: 58px;
       }
     }
   }
@@ -1335,6 +1385,9 @@ body {
     &__swiper-pagination {
       left: -48px;
     }
+    &__control {
+      height: 85px;
+    }
   }
   .booking {
     &__form {
@@ -1359,9 +1412,17 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(139px, 1fr));
     }
   }
+  .medical-care{
+    flex-direction: column;
+    gap: 30px 0;
+    padding: 30px 5px 30px 15px;
+  }
 }
 
 @media (max-width: 490px) {
+  .header {
+    background-position: 18% 20%, 21% 47%, 73% 37%, 90% 65%;
+  }
   .title {
     font-size: 20px;
   }
@@ -1499,6 +1560,59 @@ body {
       font-size: 16px;
     }
   }
+  .about-us{
+    &__offer-item{
+      min-width: 100%;
+    }
+    &__descr{
+      font-size: 16px;
+      font-weight: 400;
+    }
+    &__info-title{
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &__offer-title{
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &__offer-item{
+      margin-bottom: 20px;
+      font-size: 14px;
+      padding-left: 40px;
+      &::before{
+        background-image: url("../img/offer_cat-mob.svg");
+        width: 35px;
+        height: 35px;
+      }
+    }
+    &__dop-info-item{
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+  .medical-care{
+    &__title{
+      font-size: 20px;
+    }
+  }
+  .fears{
+    &__inner{
+      padding: 50px 0;
+    }
+    &__subtitle-mob{
+      margin-bottom: 30px;
+    }
+  }
+  .accordion{
+    &__title{
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &__par{
+      font-size: 14px;
+    }
+  }
 }
 
 @media (max-width: 400px) {
@@ -1516,6 +1630,48 @@ body {
     &__inner {
       grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
       gap: 25px 12px;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .menu {
+    &__img_mob {
+      width: 270px;
+      margin: 0 auto;
+    }
+    &__item {
+      &_rooms {
+        top: 143px;
+        left: 20px;
+      }
+      &_booking {
+        top: 48px;
+        left: 57px;
+        span {
+          font-size: 12px;
+          width: 66px;
+          word-wrap: break-word;
+        }
+      }
+      &_video {
+        top: 41px;
+        left: 148px;
+        span {
+          font-size: 13px;
+          width: 60px;
+          display: block;
+          word-wrap: break-word;
+        }
+      }
+      &_pay {
+        top: 110px;
+        left: 211px;
+      }
+      &_about {
+        top: 178px;
+        left: 130px;
+      }
     }
   }
 }
