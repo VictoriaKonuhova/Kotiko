@@ -816,7 +816,7 @@ body {
   &__text {
     line-height: 150%;
   }
-  &__img-mob{
+  &__img-mob {
     display: none;
   }
 }
@@ -828,7 +828,7 @@ body {
   &__title {
     margin-bottom: 50px;
   }
-  &__subtitle-mob{
+  &__subtitle-mob {
     display: none;
     margin-top: 10px;
     margin-bottom: 50px;
@@ -952,7 +952,7 @@ body {
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
-    gap: 0 145px;
+    gap: 0 15px;
   }
   &__way-title {
     font-weight: 600;
@@ -974,6 +974,7 @@ body {
   &__way-text {
     max-width: 200px;
     width: 100%;
+    margin-top: 20px;
   }
 }
 
@@ -982,6 +983,7 @@ body {
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
   &__copyright {
     font-weight: 500;
@@ -998,12 +1000,16 @@ body {
   }
 }
 
-@media (max-width: 1100px){
-  .medical-care{
+@media (max-width: 1100px) {
+  .medical-care {
     padding: 20px 30px;
     gap: 0 20px;
   }
-
+  .contacts{
+    &__way-inner{
+      gap: 0 40px;
+    }
+  }
 }
 
 @media (max-width: 1060px) {
@@ -1222,20 +1228,58 @@ body {
       gap: 0 35px;
     }
   }
-  .medical-care{
-    &__img{
+  .medical-care {
+    &__img {
       display: none;
     }
-    &__img-mob{
+    &__img-mob {
       display: block;
     }
-    &__info{
+    &__info {
       order: -1;
     }
   }
-  .fears{
+  .fears {
+    &__inner {
+      padding: 100px 0 50px;
+    }
+  }
+  .partnership {
+    &__inner {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+    &__info {
+      margin-top: 30px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    &__info-title{
+      margin-top: 30px;
+    }
+    &__info-text{
+      order: -1;
+    }
+  }
+  .contacts{
+    &__way{
+      flex-direction: column;
+      gap: 30px 0;
+    }
+    &__way-title{
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .footer{
     &__inner{
-      padding: 100px 0 50px; 
+      flex-direction: column;
+      gap: 20px 0;
+    }
+    &__menu{
+      order: -1;
     }
   }
 }
@@ -1294,24 +1338,38 @@ body {
       margin-bottom: 30px;
     }
   }
-  .fears{
-    &__title{
+  .fears {
+    &__title {
       margin-bottom: 0;
     }
-    &__subtitle-mob{
+    &__subtitle-mob {
       display: block;
     }
   }
-  .accordion{
-    &__title{
+  .accordion {
+    &__title {
       padding: 20px 0;
       &::before,
-      &::after{
+      &::after {
         display: none;
       }
     }
-    &__par{
+    &__par {
       padding: 10px 0;
+    }
+  }
+  .partnership{
+    padding: 50px 0 100px;
+  }
+  .contacts{
+    padding: 30px 0;
+    &__address-box{
+      flex-direction: column;
+      gap: 30px 0;
+      margin-bottom: 20px;
+    }
+    &__address-copy{
+      margin: 0 auto 0 0;
     }
   }
 }
@@ -1412,10 +1470,50 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(139px, 1fr));
     }
   }
-  .medical-care{
+  .medical-care {
     flex-direction: column;
     gap: 30px 0;
     padding: 30px 5px 30px 15px;
+  }
+  .partnership{
+    &__partners{
+      display: flex;
+      flex-direction: column;
+      gap: 45px 0;
+    }
+    &__partner{
+      background-image: none;
+      width: 100%;
+      height: 100%;
+      padding-left: 80px;
+      position: relative;
+      &::before{
+        position: absolute;
+        content: '';
+        background-image: url('../img/partner-bg_mob.svg');
+        width: 73px;
+        height: 60px;
+        left: 0;
+      }
+    }
+  }
+  .contacts{
+    &__title{
+      margin-bottom: 30px;
+    }
+    &__way{
+      margin-top: 30px;
+    }
+    &__way-inner{
+      flex-direction: column;
+      gap: 40px 0;
+    }
+  }
+  .footer{
+    &__menu-list{
+      flex-direction: column;
+      gap: 20px 0;
+    }
   }
 }
 
@@ -1560,57 +1658,86 @@ body {
       font-size: 16px;
     }
   }
-  .about-us{
-    &__offer-item{
+  .about-us {
+    &__offer-item {
       min-width: 100%;
     }
-    &__descr{
+    &__descr {
       font-size: 16px;
       font-weight: 400;
     }
-    &__info-title{
+    &__info-title {
       font-size: 18px;
       font-weight: 400;
     }
-    &__offer-title{
+    &__offer-title {
       font-size: 18px;
       font-weight: 400;
     }
-    &__offer-item{
+    &__offer-item {
       margin-bottom: 20px;
       font-size: 14px;
       padding-left: 40px;
-      &::before{
+      &::before {
         background-image: url("../img/offer_cat-mob.svg");
         width: 35px;
         height: 35px;
       }
     }
-    &__dop-info-item{
+    &__dop-info-item {
       font-size: 14px;
       margin-top: 5px;
     }
   }
-  .medical-care{
-    &__title{
+  .medical-care {
+    &__title {
       font-size: 20px;
     }
   }
-  .fears{
-    &__inner{
+  .fears {
+    &__inner {
       padding: 50px 0;
     }
-    &__subtitle-mob{
+    &__subtitle-mob {
       margin-bottom: 30px;
     }
   }
-  .accordion{
-    &__title{
+  .accordion {
+    &__title {
       font-size: 16px;
       font-weight: 600;
     }
-    &__par{
+    &__par {
       font-size: 14px;
+    }
+  }
+  .partnership{
+    &__info-title{
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &__info-text{
+      font-size: 16px;
+      font-weight: 400;
+    }
+    &__partner{
+      line-height: 30px;
+    }
+  }
+  .contacts{
+    &__address-box{
+      gap: 20px 0;
+    }
+    &__address,
+    &__way-title{
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &__address-copy{
+      font-size: 16px;
+    }
+    &__way{
+      gap: 20px 0;
     }
   }
 }

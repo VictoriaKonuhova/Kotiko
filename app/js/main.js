@@ -42,13 +42,13 @@ function accordion() {
 }
 accordion();
 
-// var text = document.getElementById("inputText");
-// var btn = document.getElementById("copyText");
-// btn.onclick = function () {
-//   text.select();
-//   document.execCommand("copy");
-//   alert("Скопированный адрес: " + text.value);
-// }
+var text = document.getElementById("inputText");
+var btn = document.getElementById("copyText");
+btn.onclick = function () {
+  text.select();
+  document.execCommand("copy");
+  alert("Скопированный адрес: " + text.value);
+}
 
 const btnMore = document.querySelector('.more-btn');
 const cards = Array.from(document.querySelectorAll('.video-control__room'));
