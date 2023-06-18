@@ -1728,7 +1728,10 @@ body {
     &__address-box{
       gap: 20px 0;
     }
-    &__address,
+    &__address{
+      font-size: 14px;
+      font-weight: 400;
+    }
     &__way-title{
       font-size: 18px;
       font-weight: 400;
